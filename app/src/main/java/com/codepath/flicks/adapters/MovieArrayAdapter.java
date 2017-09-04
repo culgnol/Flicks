@@ -67,7 +67,7 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
         viewHolder.tvOverview.setText(movie.getOverview());
 
         if (orientation == Configuration.ORIENTATION_PORTRAIT) {
-            Picasso.with(getContext()).load(movie.getPosterPath()).into(viewHolder.ivImage);
+            Picasso.with(getContext()).load(movie.getPosterPath()).placeholder(R.drawable.ic_launcher).into(viewHolder.ivImage);
         } else {
             Picasso.with(getContext()).load(movie.getBackdropPath()).into(viewHolder.ivImage);
         }
